@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary: #ef4444;
+    --light-black: #121212;
+    --card-black: #1e1e1e;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--light-black);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+    border: 2px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.typing-line-1 {
+    width: 0;
+    margin-bottom: 0.5rem;
+    animation: 
+        typing 1.5s steps(30, end) forwards, 
+        blink .75s step-end 3 forwards;
+}
+
+.typing-line-2 {
+    width: 0;
+    animation: 
+        typing 2s steps(40, end) 2s forwards, 
+        blink .75s step-end infinite 2s forwards, 
+        reveal 0.1s forwards 2s;
+}
+
+.border-right-caret {
+    border-right: 3px solid transparent;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-indicator-fade {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 4.5s;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgb(255, 254, 254);
+}
+
+@keyframes reveal {
+    to { opacity: 1; }
+}
+
+.font-outfit {
+    font-family: 'Outfit', sans-serif;
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.scroll-reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.about-typing {
+    width: 0;
+    display: inline-block;
+    animation: 
+        typing-about 1.2s steps(30, end) forwards, 
+        blink .75s step-end 1 forwards;
+}
+
+@keyframes typing-about {
+    from { width: 0; }
+    to { width: 8.2ch; }
+}
+
+.portfolio-typing {
+    width: 0;
+    display: inline-block;
+    animation: 
+        typing-portfolio 1.2s steps(30, end) forwards, 
+        blink .75s step-end 1 forwards;
+}
+
+@keyframes typing-portfolio {
+    from { width: 0; }
+    to { width: 9.2ch; }
+}
