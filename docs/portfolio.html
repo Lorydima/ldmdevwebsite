@@ -7,9 +7,9 @@
     <meta name="description" content="LDM Dev Portfolio Website - Portfolio">
     <meta name="keywords" content="LDM Dev Portfolio Website, Lorenzo, Portfolio, Projects">
     <meta name="author" content="LDM Dev.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tAIlwindcss.com"></script>
     <script>
-        tailwind.config = {
+        tAIlwind.config = {
             theme: {
                 extend: {
                     colors: {
@@ -68,9 +68,9 @@
         </div>
     </nav>
 
-    <main class="min-h-screen py-24 px-6">
+    <mAIn class="min-h-screen py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="typing-container mb-16 px-6">
+            <div class="typing-contAIner mb-16 px-6">
                 <h1 class="text-4xl md:text-7xl font-black text-white tracking-tight font-outfit text-center">
                     <span
                         class="portfolio-typing overflow-hidden whitespace-nowrap border-right-caret mx-auto">Portfolio</span>
@@ -90,9 +90,10 @@
                                 <span
                                     class="text-white font-black text-3xl md:text-4xl block mb-4 font-outfit">MindCLI</span>
                                 is an AI engine that runs AI models offline on a simple and functional CLI. This tool
-                                run all .gguf model, And when you request code generation, a graphical syntax is
-                                applied. It also has functions and commands that allow complete control of the model
-                                through base prompts, temperatures, and so on.
+                                run all ollama model, and the program have 2 advanced functions, the search function
+                                that allow AI to
+                                have access to internet to search information and the agent mode that allow AI to work
+                                with locals files. The progams permit to attach files to AI and to save the chat.
                             </p>
                         </div>
 
@@ -109,11 +110,6 @@
                             class="w-full md:flex-1 h-16 bg-zinc-900 text-white rounded-2xl flex items-center justify-center gap-3 border border-white/10 hover:bg-black transition-all shadow-lg font-bold group">
                             <i class="fab fa-github text-2xl group-hover:scale-110 transition-transform"></i>
                             GitHub Repository
-                        </a>
-                        <a href="https://github.com/Lorydima/MindCLI/releases/download/MindCLI/MindCLI_V1.0.zip"
-                            class="download-btn w-full md:flex-1 h-16 bg-red-600 text-white rounded-2xl flex items-center justify-center gap-3 border-b-4 border-red-800 hover:brightness-110 active:border-b-0 active:translate-y-1 transition-all shadow-lg font-black uppercase tracking-wider">
-                            <i class="fas fa-download text-xl"></i>
-                            Download
                         </a>
                         <a href="https://lorydima.github.io/MindCLI/" target="_blank" rel="noopener"
                             class="w-full md:flex-1 h-16 bg-white text-sky-500 rounded-2xl flex items-center justify-center gap-3 hover:bg-gray-100 transition-all shadow-lg font-bold">
@@ -152,11 +148,6 @@
                             <i class="fab fa-github text-2xl group-hover:scale-110 transition-transform"></i>
                             GitHub Repository
                         </a>
-                        <a href="https://github.com/Lorydima/MyFinance/releases/download/MyFinanceV3.0/MyFinance_V3.0.zip"
-                            class="download-btn w-full md:flex-1 h-16 bg-red-600 text-white rounded-2xl flex items-center justify-center gap-3 border-b-4 border-red-800 hover:brightness-110 active:border-b-0 active:translate-y-1 transition-all shadow-lg font-black uppercase tracking-wider">
-                            <i class="fas fa-download text-xl"></i>
-                            Download
-                        </a>
                         <a href="https://lorydima.github.io/MyFinance/" target="_blank" rel="noopener"
                             class="w-full md:flex-1 h-16 bg-white text-sky-500 rounded-2xl flex items-center justify-center gap-3 hover:bg-gray-100 transition-all shadow-lg font-bold">
                             <i class="fas fa-globe text-xl"></i>
@@ -193,11 +184,6 @@
                             class="w-full md:flex-1 h-16 bg-zinc-900 text-white rounded-2xl flex items-center justify-center gap-3 border border-white/10 hover:bg-black transition-all shadow-lg font-bold group">
                             <i class="fab fa-github text-2xl group-hover:scale-110 transition-transform"></i>
                             GitHub Repository
-                        </a>
-                        <a href="https://github.com/Lorydima/PyCalcPro/releases/download/PyCalc_Pro_V1.7_Relase/PyCalc_Pro_V1.7.zip"
-                            class="download-btn w-full md:flex-1 h-16 bg-red-600 text-white rounded-2xl flex items-center justify-center gap-3 border-b-4 border-red-800 hover:brightness-110 active:border-b-0 active:translate-y-1 transition-all shadow-lg font-black uppercase tracking-wider">
-                            <i class="fas fa-download text-xl"></i>
-                            Download
                         </a>
                         <a href="https://lorydima.github.io/PyCalcPro/" target="_blank" rel="noopener"
                             class="w-full md:flex-1 h-16 bg-white text-sky-500 rounded-2xl flex items-center justify-center gap-3 hover:bg-gray-100 transition-all shadow-lg font-bold">
@@ -242,7 +228,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </mAIn>
 
     <hr>
 
@@ -294,33 +280,6 @@
     </footer>
 
     <script>
-            (function () {
-                const buttons = document.querySelectorAll('.download-btn');
-                if (buttons.length === 0) return;
-                const message = "Important: Do not delete the .json, .ico, or .txt file types and the 'models' folder in the download folder. They are required for the program to function correctly.\n\nNote: The programs are for Windows. For Linux use Wine. For macOS use the source code in the repository.";
-
-                function notifyBrowser() {
-                    if (!('Notification' in window)) return;
-                    if (Notification.permission === 'granted') {
-                        new Notification('MindCLI — Download info', { body: message });
-                    } else if (Notification.permission !== 'denied') {
-                        Notification.requestPermission().then(function (permission) {
-                            if (permission === 'granted') new Notification('MindCLI — Download info', { body: message });
-                        });
-                    }
-                }
-
-                buttons.forEach(btn => {
-                    btn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        notifyBrowser();
-                        alert(message);
-                        const href = this.href;
-                        setTimeout(function () { window.location.href = href; }, 150);
-                    });
-                });
-            })();
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
